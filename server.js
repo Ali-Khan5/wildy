@@ -83,8 +83,8 @@ app.get("/fiind/:name", (req, res) => {
 // important 
   // return [...document.querySelectorAll('.w80p')]
   //       .map(el => el.innerText);
-
-  const nightmare = Nightmare({ show: true });
+console.log('running nightmare...');
+  const nightmare = Nightmare({ show: false });
   nightmare
     .goto("https://duckduckgo.com")
     .type("#search_form_input_homepage", `${req.params.name}`)
